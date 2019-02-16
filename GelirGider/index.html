@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gelir Gider Takip</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="container my-3">
+        <p class="h4 mb-5">GELİR GİDER TAKİP PROGRAMI</p>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card border-success">
+                    <div class="container my-3">
+                        <div class="form-group">
+                            <label for="gelir">Gelirinizi Giriniz</label>
+                            <input type="text" class="form-control" id="gelirInput" placeholder="0">
+                        </div>
+                        <button type="submit" class="btn btn-outline-success" onclick="gelirEkle()">Gelir Ekle</button>
+                    </div>
+                </div>
+
+                <div class="card border-danger my-3">
+                    <div class="container my-3">
+                        <div class="form-group">
+                            <label for="gelir">Gider Açıklaması</label>
+                            <input type="text" class="form-control" id="giderAciklamaInput" placeholder="Gider">
+                        </div>
+                        <div class="form-group">
+                            <label for="gelir">Gider Tutarınız</label>
+                            <input type="text" class="form-control" id="giderMiktarInput" placeholder="0">
+                        </div>
+                        <button type="submit" class="btn btn-outline-danger" onclick="giderEkle()">Gider Ekle</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-7">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <p class="font-weight-bold">TOPLAM GELİR</p>
+                        <i class="fas fa-money-bill-alt fa-4x text-success"></i>
+                        <br>
+                        <span class="font-weight-bold text-success my-3 h2">₺</span>
+                        <span class="font-weight-bold text-success my-3 h2" id="gelirMiktarı">0</span>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="font-weight-bold">TOPLAM GİDER</p>
+                        <i class="far fa-credit-card fa-4x text-danger"></i>
+                        <br>
+                        <span class="font-weight-bold text-danger my-3 h2">₺</span> 
+                        <span class="font-weight-bold text-danger my-3 h2" id="giderMiktarı">0</span>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="font-weight-bold">KALAN</p>
+                        <i class="fas fa-dollar-sign fa-4x text-primary"></i>
+                        <br>
+                        <span class="font-weight-bold text-success my-3 h2">₺</span> 
+                        <span class="font-weight-bold text-success my-3 h2" id="kalanMiktar">0</span>
+                    </div>
+                </div>
+                <div class="row text-center mt-3">
+                    <div class="mx-auto" id="aciklamaDiv">
+                        <p>Gider Açıklaması</p>
+                    </div>
+                    <div class="mx-auto" id="tutarDiv">
+                        <p>Gider Tutar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
